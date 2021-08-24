@@ -34,9 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SerialBoxes, Version=1.0.2435.24514, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SerialBox\SerialBox\bin\Debug\SerialBoxes.dll</HintPath>
+    <Reference Include="SerialBoxes">
+      <HintPath>..\..\SerialBox\SerialBox\bin\Release\SerialBoxes.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
