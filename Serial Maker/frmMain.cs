@@ -13,13 +13,18 @@ namespace Serial_Maker
         public frmMain()
         {
             InitializeComponent();
+            stbBase.Select();
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             try
             {
-                stbPass.Text = Encryption.MakePassword(stbBase.Text, txtIdentifier.Text);
+                stbPass.Text = Encryption.MakePassword(stbBase.Text.Replace("-", String.Empty), txtIdentifier.Text);
+                stbPass.Text = stbPass.Text.Insert(5, "-");
+                stbPass.Text = stbPass.Text.Insert(11, "-");
+                stbPass.Text = stbPass.Text.Insert(17, "-");
+                stbPass.Text = stbPass.Text.Insert(23, "-");
             }
             catch(Exception ex)
             {

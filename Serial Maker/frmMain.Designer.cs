@@ -28,36 +28,18 @@ namespace Serial_Maker
         /// </summary>
         private void InitializeComponent()
         {
-            this.stbBase = new SerialBox.SerialBox();
-            this.stbPass = new SerialBox.SerialBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIdentifier = new System.Windows.Forms.TextBox();
+            this.stbBase = new System.Windows.Forms.TextBox();
+            this.stbPass = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // stbBase
-            // 
-            this.stbBase.CaptleLettersOnly = true;
-            this.stbBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.stbBase.Location = new System.Drawing.Point(12, 35);
-            this.stbBase.Name = "stbBase";
-            this.stbBase.Size = new System.Drawing.Size(293, 18);
-            this.stbBase.TabIndex = 0;
-            // 
-            // stbPass
-            // 
-            this.stbPass.CaptleLettersOnly = true;
-            this.stbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.stbPass.Location = new System.Drawing.Point(12, 59);
-            this.stbPass.Name = "stbPass";
-            this.stbPass.Size = new System.Drawing.Size(293, 18);
-            this.stbPass.TabIndex = 1;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(12, 83);
+            this.btnGenerate.Location = new System.Drawing.Point(203, 86);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(293, 23);
+            this.btnGenerate.Size = new System.Drawing.Size(102, 23);
             this.btnGenerate.TabIndex = 2;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -79,20 +61,40 @@ namespace Serial_Maker
             this.txtIdentifier.Name = "txtIdentifier";
             this.txtIdentifier.Size = new System.Drawing.Size(27, 20);
             this.txtIdentifier.TabIndex = 4;
+            this.txtIdentifier.Text = "591";
+            // 
+            // stbBase
+            // 
+            this.stbBase.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.stbBase.Location = new System.Drawing.Point(12, 33);
+            this.stbBase.Name = "stbBase";
+            this.stbBase.Size = new System.Drawing.Size(293, 20);
+            this.stbBase.TabIndex = 5;
+            // 
+            // stbPass
+            // 
+            this.stbPass.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.stbPass.Location = new System.Drawing.Point(12, 59);
+            this.stbPass.Name = "stbPass";
+            this.stbPass.ReadOnly = true;
+            this.stbPass.Size = new System.Drawing.Size(293, 20);
+            this.stbPass.TabIndex = 6;
             // 
             // frmMain
             // 
             this.AcceptButton = this.btnGenerate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 118);
+            this.ClientSize = new System.Drawing.Size(317, 121);
+            this.Controls.Add(this.stbPass);
+            this.Controls.Add(this.stbBase);
             this.Controls.Add(this.txtIdentifier);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.stbPass);
-            this.Controls.Add(this.stbBase);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Serial Maker";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,12 +102,11 @@ namespace Serial_Maker
         }
 
         #endregion
-
-        private SerialBox.SerialBox stbBase;
-        private SerialBox.SerialBox stbPass;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIdentifier;
+        private System.Windows.Forms.TextBox stbBase;
+        private System.Windows.Forms.TextBox stbPass;
     }
 }
 
